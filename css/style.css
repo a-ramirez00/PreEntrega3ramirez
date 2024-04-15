@@ -1,0 +1,471 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+
+body {
+  background-color: #0b0d1f; }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #000000;
+  height: 5rem;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  right: 0; }
+  header li a {
+    text-decoration: none;
+    color: #ebebebe0;
+    padding: .625rem .5rem; }
+    header li a:hover {
+      background-color: gray;
+      border-radius: .3125rem; }
+
+header p {
+  font-size: 2rem;
+  color: #dce1e4;
+  margin-bottom: .625rem;
+  font-weight: bolder; }
+
+#btn-menu,
+.iconMenu,
+.iconClose {
+  display: none; }
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  font-size: 1.125rem;
+  margin-bottom: .625rem; }
+
+a {
+  /* display: block; */
+  text-decoration: none;
+  color: #ebebebe0;
+  padding: .625rem .5rem;
+  /* padding: 20px; */ }
+
+.activo a {
+  background-color: rgba(128, 128, 128, 0.614);
+  border-radius: .3125rem; }
+
+main .titulo-inicio {
+  text-align: center;
+  margin-top: .9375rem;
+  margin-bottom: .9375rem;
+  font-size: 2rem;
+  color: #ebebebcc;
+  font-weight: bold; }
+
+main .galeria-inicio {
+  display: flex;
+  width: 43.75rem;
+  height: 26.875rem;
+  margin: auto; }
+  main .galeria-inicio img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease; }
+    main .galeria-inicio img:hover {
+      width: 18.75rem;
+      opacity: 1;
+      filter: contrast(1);
+      border-radius: 0px; }
+    main .galeria-inicio img:first-child {
+      border-radius: .625rem 0 0 .625rem; }
+    main .galeria-inicio img:last-child {
+      border-radius: 0 .625rem .625rem 0; }
+
+main h2 {
+  margin-top: .9375rem;
+  margin-bottom: .9375rem;
+  text-align: center;
+  color: #ebebebc8; }
+
+main .grid-inicio {
+  display: grid;
+  width: 80%;
+  height: 37.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: " img1 img1 parrafo1 parrafo1" " img1 img1 parrafo1 parrafo1" " img2 img2 parrafo2 parrafo2" " img2 img2 parrafo2 parrafo2";
+  justify-content: center;
+  align-content: center;
+  margin: auto; }
+  main .grid-inicio .img1 {
+    grid-area: img1;
+    justify-self: center;
+    align-self: center; }
+  main .grid-inicio .img2 {
+    grid-area: img2;
+    justify-self: center;
+    align-self: center; }
+  main .grid-inicio .parrafo-grid-1 {
+    justify-self: center;
+    align-self: center;
+    grid-area: parrafo1;
+    font-size: 1.125rem;
+    color: #ebebeb;
+    text-indent: .4375rem; }
+  main .grid-inicio .parrafo-grid-2 {
+    justify-self: center;
+    align-self: center;
+    grid-area: parrafo2;
+    font-size: 1.125rem;
+    color: #ebebeb;
+    text-indent: .4375rem; }
+  main .grid-inicio img {
+    width: 15.625rem;
+    border-radius: .3125rem; }
+
+main .grid-seleccion {
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1.875rem repeat(3, 1fr);
+  grid-template-areas: "titulo-grid         .              ." " parrafo-se     parrafo-se      parrafo-se" " img1-seleccion img2-seleccion img3-seleccion" " img1-seleccion img2-seleccion img3-seleccion";
+  justify-content: center;
+  margin-bottom: .9375rem; }
+  main .grid-seleccion img {
+    border-radius: .625rem;
+    width: 18.75rem; }
+  main .grid-seleccion .titulo-grid {
+    grid-area: titulo-grid;
+    color: #ebebebc8; }
+  main .grid-seleccion .parrafo-seleccion {
+    grid-area: parrafo-se;
+    color: #ebebeb; }
+  main .grid-seleccion .img1-seleccion {
+    grid-area: img1-seleccion;
+    align-self: center;
+    justify-self: center; }
+  main .grid-seleccion .img2-seleccion {
+    grid-area: img2-seleccion;
+    align-self: center;
+    justify-self: center; }
+  main .grid-seleccion .img3-seleccion {
+    grid-area: img3-seleccion;
+    align-self: center;
+    justify-self: center; }
+
+main .section-barcelona {
+  margin: auto;
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem; }
+  main .section-barcelona p {
+    color: #ebebeb;
+    text-indent: .3125rem; }
+  main .section-barcelona img {
+    border-radius: .3125rem;
+    width: 18.75rem; }
+  main .section-barcelona div {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap; }
+
+main .section-barcelona1 {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 1.5625rem;
+  gap: .625rem; }
+  main .section-barcelona1 .div-parrafo {
+    width: auto; }
+  main .section-barcelona1 img {
+    width: 20.3125rem;
+    border-radius: .3125rem; }
+  main .section-barcelona1 p {
+    text-indent: .3125rem;
+    color: #ebebeb; }
+
+main .titulo-estadisticas {
+  font-size: 3rem;
+  color: #ebebebc8;
+  text-align: center;
+  margin: .625rem 0; }
+
+main .estadisticas-pagina {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: .625rem; }
+  main .estadisticas-pagina .estadisticas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .3125rem;
+    width: 40%; }
+    main .estadisticas-pagina .estadisticas .h2-estadisticas:hover {
+      text-decoration: underline; }
+    main .estadisticas-pagina .estadisticas ul {
+      padding: .625rem; }
+      main .estadisticas-pagina .estadisticas ul:hover {
+        background-color: rgba(128, 128, 128, 0.183);
+        border-radius: .3125rem; }
+    main .estadisticas-pagina .estadisticas .estadisticas-barcelona {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      /* gap: 1.875rem; */
+      align-items: center; }
+      main .estadisticas-pagina .estadisticas .estadisticas-barcelona li {
+        list-style: none;
+        color: white; }
+
+main .section-parrafo {
+  color: #ebebeb;
+  text-indent: 7px;
+  word-spacing: .1875rem;
+  width: 96%;
+  margin: auto; }
+
+main .h3-premios {
+  text-align: center;
+  margin: .9375rem;
+  color: #ebebeb; }
+
+main .premios {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  margin-bottom: .9375rem; }
+  main .premios .Premios-parrafo {
+    width: 18.75rem; }
+  main .premios img {
+    width: 25rem;
+    border-radius: .3125rem; }
+  main .premios p {
+    color: #ebebeb;
+    text-indent: .4375rem;
+    word-spacing: .1875rem; }
+
+main .titulo-inicio-contacto {
+  text-align: center;
+  margin-top: .9375rem;
+  margin-bottom: .9375rem;
+  font-size: 4rem;
+  color: #ebebebcc;
+  font-weight: bold; }
+
+main .contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+  width: 100%; }
+  main .contacto .parrafo-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+    text-indent: .4375rem;
+    font-size: 1.5rem;
+    color: #ebebeb;
+    width: 80%; }
+  main .contacto .formulario {
+    width: 30%;
+    border-radius: .3125rem;
+    background-color: rgba(43, 42, 42, 0.595); }
+    main .contacto .formulario form {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      margin: auto;
+      margin-top: .9375rem;
+      margin-bottom: .9375rem;
+      gap: .9375rem; }
+      main .contacto .formulario form .separacion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .3125rem; }
+        main .contacto .formulario form .separacion .color-input {
+          color: #ebebeb;
+          font-size: 24px; }
+        main .contacto .formulario form .separacion input {
+          height: 1.5625rem; }
+        main .contacto .formulario form .separacion .tamaño-input {
+          height: 3.75rem; }
+        main .contacto .formulario form .separacion .enviar {
+          background-color: #3131d4;
+          border-radius: .3125rem;
+          margin: auto;
+          width: 40%;
+          color: white; }
+
+footer {
+  width: 100%;
+  height: 6.25rem;
+  background-color: black;
+  margin-top: .625rem; }
+  footer .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    footer .footer ul {
+      margin: 0; }
+      footer .footer ul li {
+        list-style: none; }
+    footer .footer .lista-1 {
+      margin-top: .625rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2.5rem; }
+      footer .footer .lista-1 li {
+        text-decoration: none;
+        color: #ebebeb; }
+    footer .footer .iconos {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: .625rem; }
+      footer .footer .iconos img {
+        width: 1.875rem; }
+      footer .footer .iconos li a:hover {
+        background-color: none;
+        border-radius: none; }
+
+@media (max-width: 799px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    header .iconClose,
+    header .iconMenu {
+      display: block;
+      /* padding: 13px; */
+      cursor: pointer; }
+    header .menu {
+      width: 100%;
+      position: absolute;
+      transform: translateY(-200%);
+      transition: all 1s;
+      animation: desaparece 1s 1;
+      top: 0; }
+      header .menu li {
+        padding: .625rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+        background-color: black; }
+  @keyframes desaparece {
+    0%,
+    100% {
+      margin-top: -100%; } }
+    header ul {
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
+      margin: 0; }
+    header #btn-menu:checked ~ .menu {
+      transform: translateY(0);
+      transition: all 1s; }
+    header li:nth-child(n+2):nth-child(-n+6):hover {
+      background-color: #2240af45; }
+    header li a:hover {
+      background-color: none;
+      border-radius: none; }
+    header .activo a {
+      background-color: none;
+      border-radius: none; }
+  main .barcelona-tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem; }
+    main .barcelona-tablet img {
+      width: 25rem; }
+  main .section-barcelona1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+    width: 80%; }
+    main .section-barcelona1 img {
+      width: 25rem; }
+  main .div-parrafo {
+    width: 100%; }
+  main .estadisticas-pagina {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    main .estadisticas-pagina .estadisticas {
+      width: 80%; }
+      main .estadisticas-pagina .estadisticas ul {
+        padding: .4375rem; }
+        main .estadisticas-pagina .estadisticas ul:hover {
+          background-color: none;
+          border-radius: none; }
+  main .section-parrafo {
+    text-indent: .25rem; }
+  main .premios {
+    gap: 1.25rem;
+    margin-bottom: .625rem; }
+    main .premios .Premios-parrafo {
+      width: 96%; }
+      main .premios .Premios-parrafo p {
+        text-indent: .25rem;
+        font-size: 1rem; }
+  main .titulo-inicio-contacto {
+    margin-top: .625rem;
+    margin-bottom: .625rem;
+    font-size: 3rem; }
+  main .contacto .parrafo-contacto {
+    gap: .9375rem;
+    text-indent: .3125rem; }
+  main .contacto .formulario {
+    width: 70%;
+    margin-bottom: .625rem; }
+    main .contacto .formulario form {
+      width: 70%;
+      gap: .625rem; }
+      main .contacto .formulario form .separacion .enviar {
+        width: 30%; }
+  footer {
+    margin-top: 0;
+    height: 9.375rem; }
+    footer .footer {
+      height: 9.375rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: .3125rem; }
+      footer .footer .lista-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .9375rem;
+        margin-top: 0; }
+      footer .footer .iconos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .625rem; }
+        footer .footer .iconos li {
+          padding: 0;
+          border: 0; }
+          footer .footer .iconos li a {
+            padding: 0; } }

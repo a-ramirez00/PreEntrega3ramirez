@@ -1,0 +1,202 @@
+@media(max-width: 799px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+
+        .iconClose,
+        .iconMenu {
+            display: block;
+            /* padding: 13px; */
+            cursor: pointer;
+        }
+
+        .menu {
+            width: 100%;
+            position: absolute;
+            transform: translateY(-200%);
+            transition: all 1s;
+            animation: desaparece 1s 1;
+            top: 0;
+
+            li {
+                padding: .625rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+                background-color: black;
+            }
+        }
+
+        @keyframes desaparece {
+
+            0%,
+            100% {
+                margin-top: -100%;
+            }
+        }
+
+        ul {
+            flex-direction: column;
+            justify-content: center;
+            gap: 0;
+            margin: 0;
+        }
+
+
+
+        #btn-menu:checked~.menu {
+            transform: translateY(0);
+            transition: all 1s;
+        }
+
+        li:nth-child(n+2):nth-child(-n+6):hover {
+            background-color: #2240af45;
+        }
+
+        li a {
+            &:hover {
+                background-color: none;
+                border-radius: none;
+            }
+        }
+
+        .activo a {
+            background-color: none;
+            border-radius: none;
+
+        }
+    }
+
+    main {
+        .barcelona-tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.25rem;
+            img{
+                width: 25rem;
+            }
+        }
+        .section-barcelona1 {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5625rem;
+            width: 80%;
+            img{
+                width: 25rem;
+            }
+        }
+        .div-parrafo {
+            width: 100%;
+        }
+    
+
+        .estadisticas-pagina {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .estadisticas {
+                width: 80%;
+
+                ul {
+                    padding: .4375rem;
+
+                    &:hover {
+                        background-color: none;
+                        border-radius: none;
+                    }
+                }
+            }
+        }
+
+        .section-parrafo{
+            text-indent: .25rem;
+        }
+        .premios{
+            gap: 1.25rem;
+            margin-bottom: .625rem;
+            .Premios-parrafo{
+                width: 96%;
+                p{
+                    text-indent: .25rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+        // ------------------------
+        .titulo-inicio-contacto {
+            margin-top: .625rem;
+            margin-bottom: .625rem;
+            font-size: 3rem;
+        }
+    
+        .contacto {
+            .parrafo-contacto {
+                gap: .9375rem;
+                text-indent: .3125rem;
+            }
+    
+            .formulario {
+                width: 70%;
+                margin-bottom: .625rem;
+                form {
+                    width: 70%;
+                    gap: .625rem;
+
+                    .separacion {
+                        .enviar {
+                            width: 30%;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+
+    footer {
+        margin-top: 0;
+        height: 9.375rem;
+
+        .footer {
+            height: 9.375rem;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: .3125rem;
+
+            .lista-1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: .9375rem;
+                margin-top: 0;
+            }
+
+            .iconos {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: .625rem;
+
+                li {
+                    padding: 0;
+                    border: 0;
+
+                    a {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,25 @@
+// 1° a las utilities > variables, mapas, mixins, funciones
+
+
+
+// 2° a archivos de base
+@import "./base/resets";
+
+
+// 3° archivos de layout
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
+
+@import "./layout/MediaQuerry/media768";
+
+
+
+
+// 4° componentes
+
+
+
+
+
+
