@@ -1,21 +1,22 @@
-# Pre-Entrega3 Ramirez Alberto
+# Pre-Entrega Ramirez Alberto Nahuel
 
 ------------
 
-## DESCRIPCION.
+## DESCRIPCION
 Proyecto de tercera entrega de Desarrollo Web CoderHouse. Sitio web con 5 paginas. 
 ## Tecnologias aplicadas.
 - HTML
-- CSS
+- CSS-
 - Git
 - GitHub
 - Bootstrap
 - SASS
+- SEO
 
 ------------
 
 ### Las paginas de totalidad responsive son:
-Barcelona
-Estadisticas
-Contacto
-Premios
+- Barcelona
+- Estadisticas
+- Premios
+- Contacto
