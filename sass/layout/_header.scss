@@ -1,9 +1,9 @@
+
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    // para llamar mixins se utiliza el @include
+    @include flex(row, space-around, center);
     width: 100%;
-    background-color: #000000;
+    background-color:map-get($colores, fondo-header-footer) ;
     height: 5rem;
     position: sticky;
     z-index: 1000;
@@ -11,17 +11,17 @@ header {
     right: 0;
     li a {
         text-decoration: none;
-        color: #ebebebe0;
+        color: map-get($colores, color-texto );
         padding: .625rem .5rem;
         &:hover{
-            background-color: gray;
+            background-color: map-get($colores, fondo_hover--nav-bar );
             border-radius: .3125rem;
         }
     }
 }
 header p{
     font-size: 2rem;
-    color: rgb(220, 225, 228);
+    color: map-get($colores , color-nombrepagina );
     margin-bottom: .625rem;
     font-weight: bolder;
 }
@@ -40,12 +40,12 @@ ul {
 a {
     /* display: block; */
     text-decoration: none;
-    color: #ebebebe0;
+    color: map-get($colores, color-texto );
     padding: .625rem .5rem;
     /* padding: 20px; */
 }
 
 .activo a{
-    background-color: rgba(128, 128, 128, 0.614);
+    background-color: map-get($colores, fondo_clase-activo );
     border-radius: .3125rem;
 }

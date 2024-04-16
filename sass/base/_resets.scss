@@ -5,5 +5,5 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 body{
-    background-color: #0b0d1f;
+    background-color: map-get($colores , fondo-body );
 }

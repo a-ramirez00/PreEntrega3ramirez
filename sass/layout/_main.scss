@@ -6,7 +6,7 @@ main {
         margin-top: .9375rem;
         margin-bottom: .9375rem;
         font-size: 2rem;
-        color: #ebebebcc;
+        color: map-get($colores, color-titulos );
         font-weight: bold;
     }
 
@@ -44,7 +44,7 @@ main {
         margin-top: .9375rem;
         margin-bottom: .9375rem;
         text-align: center;
-        color: #ebebebc8;
+        color: map-get($colores, color-titulos );
     }
 
     .grid-inicio {
@@ -80,7 +80,7 @@ main {
             align-self: center;
             grid-area: parrafo1;
             font-size: 1.125rem;
-            color: #ebebeb;
+            color: map-get($colores, color-texto );
             text-indent: .4375rem;
         }
 
@@ -89,7 +89,7 @@ main {
             align-self: center;
             grid-area: parrafo2;
             font-size: 1.125rem;
-            color: #ebebeb;
+            color:  map-get($colores, color-texto );
             text-indent: .4375rem;
         }
 
@@ -121,12 +121,12 @@ main {
 
         .titulo-grid {
             grid-area: titulo-grid;
-            color: #ebebebc8;
+            color: map-get($colores, color-titulos );
         }
 
         .parrafo-seleccion {
             grid-area: parrafo-se;
-            color: #ebebeb
+            color: map-get($colores, color-texto );
         }
 
         .img1-seleccion {
@@ -153,14 +153,11 @@ main {
     .section-barcelona {
         margin: auto;
         width: 96%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex(column, center, center);
         gap: 1.25rem;
 
         p {
-            color: #ebebeb;
+            color: map-get($colores, color-texto );
             text-indent: .3125rem;
         }
 
@@ -179,9 +176,7 @@ main {
 
     .section-barcelona1 {
         width: 80%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(row, space-between, center);
         margin: auto;
         margin-bottom: 1.5625rem;
         gap: .625rem;
@@ -197,28 +192,24 @@ main {
 
         p {
             text-indent: .3125rem;
-            color: #ebebeb;
+            color: map-get($colores, color-texto );
         }
     }
 
     // -------------------------------------------
     .titulo-estadisticas {
         font-size: 3rem;
-        color: #ebebebc8;
+        color: map-get($colores, color-titulos );
         text-align: center;
         margin: .625rem 0;
     }
 
     .estadisticas-pagina {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @include flex(row, space-around, none);
         margin: .625rem;
 
         .estadisticas {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            @include flex(column, center, none);
             gap: .3125rem;
             width: 40%;
 
@@ -230,21 +221,16 @@ main {
                 padding: .625rem;
 
                 &:hover {
-                    background-color: rgba(128, 128, 128, 0.183);
+                    background-color: map-get($colores, fondo_clase-activo );
                     border-radius: .3125rem;
                 }
             }
 
             .estadisticas-barcelona {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                /* gap: 1.875rem; */
-                align-items: center;
-
+                @include flex(row, space-between, center);
                 li {
                     list-style: none;
-                    color: white;
+                    color: map-get($colores, color-texto );
                 }
             }
         }
@@ -253,7 +239,7 @@ main {
     // ----------------------------------------------------
 
     .section-parrafo {
-        color: #ebebeb;
+        color:map-get($colores, color-texto );
         text-indent: 7px;
         word-spacing: .1875rem;
         width: 96%;
@@ -263,14 +249,11 @@ main {
     .h3-premios {
         text-align: center;
         margin: .9375rem;
-        color: #ebebeb;
+        color: map-get($colores, color-titulos );
     }
 
     .premios {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
+        @include flex(row, space-around, center);
         flex-wrap: wrap;
         width: 90%;
         margin: auto;
@@ -287,7 +270,7 @@ main {
         }
 
         p {
-            color: #ebebeb;
+            color: map-get($colores, color-texto );
             text-indent: .4375rem;
             word-spacing: .1875rem;
         }
@@ -299,25 +282,21 @@ main {
         margin-top: .9375rem;
         margin-bottom: .9375rem;
         font-size: 4rem;
-        color: #ebebebcc;
+        color: map-get($colores, color-titulos );
         font-weight: bold;
     }
 
     .contacto {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex(column, center, center);
         gap: 1.875rem;
         width: 100%;
 
         .parrafo-contacto {
-            display: flex;
-            flex-direction: column;
+            @include flex(column, none, none);
             gap: 1.5625rem;
             text-indent: .4375rem;
             font-size: 1.5rem;
-            color: #ebebeb;
+            color: map-get($colores, color-texto );
             width: 80%;
         }
 
@@ -327,8 +306,7 @@ main {
             background-color: rgba(43, 42, 42, 0.595);
 
             form {
-                display: flex;
-                flex-direction: column;
+                @include flex(column, none, none);
                 width: 60%;
                 margin: auto;
                 margin-top: .9375rem;
@@ -336,13 +314,11 @@ main {
                 gap: .9375rem;
 
                 .separacion {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
+                    @include flex(column, center, none);
                     gap: .3125rem;
 
                     .color-input {
-                        color: #ebebeb;
+                        color: map-get($colores, color-texto );
                         font-size: 24px;
                     }
 
@@ -357,7 +333,7 @@ main {
                         border-radius: .3125rem;
                         margin: auto;
                         width: 40%;
-                        color: white;
+                        color: map-get($colores, color-texto );
                     }
                 }
             }

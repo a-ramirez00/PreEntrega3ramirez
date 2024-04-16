@@ -10,10 +10,11 @@ body {
 
 header {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
-  background-color: #000000;
+  background-color: black;
   height: 5rem;
   position: sticky;
   z-index: 1000;
@@ -21,7 +22,7 @@ header {
   right: 0; }
   header li a {
     text-decoration: none;
-    color: #ebebebe0;
+    color: #ebebeb;
     padding: .625rem .5rem; }
     header li a:hover {
       background-color: gray;
@@ -48,7 +49,7 @@ ul {
 a {
   /* display: block; */
   text-decoration: none;
-  color: #ebebebe0;
+  color: #ebebeb;
   padding: .625rem .5rem;
   /* padding: 20px; */ }
 
@@ -89,7 +90,7 @@ main h2 {
   margin-top: .9375rem;
   margin-bottom: .9375rem;
   text-align: center;
-  color: #ebebebc8; }
+  color: #ebebebcc; }
 
 main .grid-inicio {
   display: grid;
@@ -141,7 +142,7 @@ main .grid-seleccion {
     width: 18.75rem; }
   main .grid-seleccion .titulo-grid {
     grid-area: titulo-grid;
-    color: #ebebebc8; }
+    color: #ebebebcc; }
   main .grid-seleccion .parrafo-seleccion {
     grid-area: parrafo-se;
     color: #ebebeb; }
@@ -181,6 +182,7 @@ main .section-barcelona {
 main .section-barcelona1 {
   width: 80%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: auto;
@@ -197,7 +199,7 @@ main .section-barcelona1 {
 
 main .titulo-estadisticas {
   font-size: 3rem;
-  color: #ebebebc8;
+  color: #ebebebcc;
   text-align: center;
   margin: .625rem 0; }
 
@@ -205,11 +207,13 @@ main .estadisticas-pagina {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: none;
   margin: .625rem; }
   main .estadisticas-pagina .estadisticas {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: none;
     gap: .3125rem;
     width: 40%; }
     main .estadisticas-pagina .estadisticas .h2-estadisticas:hover {
@@ -217,17 +221,16 @@ main .estadisticas-pagina {
     main .estadisticas-pagina .estadisticas ul {
       padding: .625rem; }
       main .estadisticas-pagina .estadisticas ul:hover {
-        background-color: rgba(128, 128, 128, 0.183);
+        background-color: rgba(128, 128, 128, 0.614);
         border-radius: .3125rem; }
     main .estadisticas-pagina .estadisticas .estadisticas-barcelona {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      /* gap: 1.875rem; */
       align-items: center; }
       main .estadisticas-pagina .estadisticas .estadisticas-barcelona li {
         list-style: none;
-        color: white; }
+        color: #ebebeb; }
 
 main .section-parrafo {
   color: #ebebeb;
@@ -239,13 +242,13 @@ main .section-parrafo {
 main .h3-premios {
   text-align: center;
   margin: .9375rem;
-  color: #ebebeb; }
+  color: #ebebebcc; }
 
 main .premios {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   width: 90%;
   margin: auto;
@@ -278,6 +281,8 @@ main .contacto {
   main .contacto .parrafo-contacto {
     display: flex;
     flex-direction: column;
+    justify-content: none;
+    align-items: none;
     gap: 1.5625rem;
     text-indent: .4375rem;
     font-size: 1.5rem;
@@ -290,6 +295,8 @@ main .contacto {
     main .contacto .formulario form {
       display: flex;
       flex-direction: column;
+      justify-content: none;
+      align-items: none;
       width: 60%;
       margin: auto;
       margin-top: .9375rem;
@@ -299,6 +306,7 @@ main .contacto {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: none;
         gap: .3125rem; }
         main .contacto .formulario form .separacion .color-input {
           color: #ebebeb;
@@ -312,7 +320,7 @@ main .contacto {
           border-radius: .3125rem;
           margin: auto;
           width: 40%;
-          color: white; }
+          color: #ebebeb; }
 
 footer {
   width: 100%;
@@ -333,6 +341,7 @@ footer {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: none;
       gap: 2.5rem; }
       footer .footer .lista-1 li {
         text-decoration: none;
@@ -340,6 +349,7 @@ footer {
     footer .footer .iconos {
       display: flex;
       flex-direction: row;
+      justify-content: none;
       align-items: center;
       gap: .625rem; }
       footer .footer .iconos img {
@@ -351,8 +361,9 @@ footer {
 @media (max-width: 799px) {
   header {
     display: flex;
-    align-items: center;
-    justify-content: space-around; }
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
     header .iconClose,
     header .iconMenu {
       display: block;
@@ -367,7 +378,7 @@ footer {
       top: 0; }
       header .menu li {
         padding: .625rem;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+        border-bottom: 3px solid rgba(0, 0, 0, 0.6);
         background-color: black; }
   @keyframes desaparece {
     0%,
@@ -393,12 +404,15 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: none;
     gap: 1.25rem; }
     main .barcelona-tablet img {
       width: 25rem; }
   main .section-barcelona1 {
     display: flex;
     flex-direction: column;
+    justify-content: none;
+    align-items: none;
     gap: 1.5625rem;
     width: 80%; }
     main .section-barcelona1 img {
@@ -447,21 +461,24 @@ footer {
     margin-top: 0;
     height: 9.375rem; }
     footer .footer {
-      height: 9.375rem;
+      display: flex;
       flex-direction: row;
-      align-items: center;
       justify-content: space-around;
+      align-items: center;
+      height: 9.375rem;
       flex-wrap: wrap;
       gap: .3125rem; }
       footer .footer .lista-1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: none;
         gap: .9375rem;
         margin-top: 0; }
       footer .footer .iconos {
         display: flex;
         flex-direction: row;
+        justify-content: none;
         align-items: center;
         gap: .625rem; }
         footer .footer .iconos li {

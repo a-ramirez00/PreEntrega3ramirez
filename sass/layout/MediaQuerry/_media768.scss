@@ -1,10 +1,6 @@
 @media(max-width: 799px) {
     header {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
-
+        @include flex(row, space-around, center);
         .iconClose,
         .iconMenu {
             display: block;
@@ -22,7 +18,7 @@
 
             li {
                 padding: .625rem;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+                border-bottom: 3px solid rgba(0, 0, 0, 0.6);
                 background-color: black;
             }
         }
@@ -69,17 +65,14 @@
 
     main {
         .barcelona-tablet {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            @include flex(column, center, none);
             gap: 1.25rem;
             img{
                 width: 25rem;
             }
         }
         .section-barcelona1 {
-            display: flex;
-            flex-direction: column;
+            @include flex(column, none, none);
             gap: 1.5625rem;
             width: 80%;
             img{
@@ -92,10 +85,7 @@
     
 
         .estadisticas-pagina {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flex(column, center, center);
             flex-wrap: wrap;
 
             .estadisticas {
@@ -165,25 +155,19 @@
         height: 9.375rem;
 
         .footer {
+            @include flex(row, space-around, center);
             height: 9.375rem;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
             flex-wrap: wrap;
             gap: .3125rem;
 
             .lista-1 {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                @include flex(column, center, none);
                 gap: .9375rem;
                 margin-top: 0;
             }
 
             .iconos {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+                @include flex(row, none, center);
                 gap: .625rem;
 
                 li {
