@@ -3,7 +3,7 @@
 ------------
 
 ## DESCRIPCION.
-Proyecto de tercera entrega de Desarrolo Web CoderHouse. Sitio web con 5 paginas. 
+Proyecto de tercera entrega de Desarrollo Web CoderHouse. Sitio web con 5 paginas. 
 ## Tecnologias aplicadas.
 - HTML
 - CSS
