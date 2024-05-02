@@ -20,42 +20,31 @@ header {
   z-index: 1000;
   top: 0;
   right: 0; }
-  header li a {
-    text-decoration: none;
-    color: #ebebeb;
-    padding: .625rem .5rem; }
-    header li a:hover {
-      background-color: gray;
-      border-radius: .3125rem; }
-
-header p {
-  font-size: 2rem;
-  color: #dce1e4;
-  margin-bottom: .625rem;
-  font-weight: bolder; }
-
-#btn-menu,
-.iconMenu,
-.iconClose {
-  display: none; }
-
-ul {
-  list-style: none;
-  display: flex;
-  gap: 1.25rem;
-  font-size: 1.125rem;
-  margin-bottom: .625rem; }
-
-a {
-  /* display: block; */
-  text-decoration: none;
-  color: #ebebeb;
-  padding: .625rem .5rem;
-  /* padding: 20px; */ }
-
-.activo a {
-  background-color: rgba(128, 128, 128, 0.614);
-  border-radius: .3125rem; }
+  header p {
+    font-size: 2rem;
+    color: #dce1e4;
+    margin-bottom: .625rem;
+    font-weight: bolder; }
+  header ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    font-size: 1.125rem;
+    margin-bottom: .625rem; }
+    header ul li a {
+      text-decoration: none;
+      color: #ebebeb;
+      padding: .625rem .5rem; }
+      header ul li a:hover {
+        background-color: gray;
+        border-radius: .3125rem; }
+  header .activo a {
+    background-color: rgba(128, 128, 128, 0.614);
+    border-radius: .3125rem; }
+  header #btn-menu,
+  header .iconMenu,
+  header .iconClose {
+    display: none; }
 
 main .titulo-inicio {
   text-align: center;
@@ -400,6 +389,8 @@ footer {
     header .activo a {
       background-color: none;
       border-radius: none; }
+  main .section-barcelona p {
+    margin: .625rem; }
   main .barcelona-tablet {
     display: flex;
     flex-direction: column;
@@ -433,6 +424,7 @@ footer {
           background-color: none;
           border-radius: none; }
   main .section-parrafo {
+    width: 90%;
     text-indent: .25rem; }
   main .premios {
     gap: 1.25rem;
@@ -486,3 +478,18 @@ footer {
           border: 0; }
           footer .footer .iconos li a {
             padding: 0; } }
+
+@media (max-width: 799px) {
+  main .barcelona-tablet img {
+    width: 20.3125rem; }
+  main .section-barcelona1 {
+    width: 87%; }
+    main .section-barcelona1 img {
+      width: 20.3125rem; }
+  main .premios img {
+    width: 20.3125rem; }
+  main .premios .Premios-parrafo {
+    width: 95%; }
+    main .premios .Premios-parrafo p {
+      text-indent: .20rem;
+      font-size: 1rem; } }

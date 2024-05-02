@@ -1,0 +1,31 @@
+@media(max-width: 799px) {
+    main {
+        .barcelona-tablet {
+            img{
+                width: 20.3125rem;
+            }
+        }
+        .section-barcelona1 {
+            width: 87%;
+            img{
+                width: 20.3125rem;
+            }
+        }
+
+
+
+        .premios{
+            img{
+                width: 20.3125rem;;
+            }
+            .Premios-parrafo{
+                width: 95%;
+                p{
+                    text-indent: .20rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+}

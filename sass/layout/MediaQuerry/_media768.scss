@@ -64,6 +64,11 @@
     }
 
     main {
+        .section-barcelona{
+            p{  
+                margin: .625rem;
+            }
+        }
         .barcelona-tablet {
             @include flex(column, center, none);
             gap: 1.25rem;
@@ -80,6 +85,7 @@
             }
         }
         .div-parrafo {
+
             width: 100%;
         }
     
@@ -101,8 +107,9 @@
                 }
             }
         }
-
+// -----------------------------
         .section-parrafo{
+            width: 90%;
             text-indent: .25rem;
         }
         .premios{

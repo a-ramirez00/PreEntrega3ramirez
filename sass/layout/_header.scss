@@ -1,51 +1,69 @@
-
 header {
     // para llamar mixins se utiliza el @include
     @include flex(row, space-around, center);
     width: 100%;
-    background-color:map-get($colores, fondo-header-footer) ;
+    background-color: map-get($colores, fondo-header-footer);
     height: 5rem;
     position: sticky;
     z-index: 1000;
-    top:0;
+    top: 0;
     right: 0;
-    li a {
-        text-decoration: none;
-        color: map-get($colores, color-texto );
-        padding: .625rem .5rem;
-        &:hover{
-            background-color: map-get($colores, fondo_hover--nav-bar );
-            border-radius: .3125rem;
+
+    // li a {
+    //     text-decoration: none;
+    //     color: map-get($colores, color-texto);
+    //     padding: .625rem .5rem;
+
+    //     &:hover {
+    //         background-color: map-get($colores, fondo_hover--nav-bar);
+    //         border-radius: .3125rem;
+    //     }
+    //     .activo a{
+    //         background-color: map-get($colores, fondo_clase-activo);
+    //         border-radius: .3125rem;
+    //     }
+    // }
+
+    p {
+        font-size: 2rem;
+        color: map-get($colores , color-nombrepagina);
+        margin-bottom: .625rem;
+        font-weight: bolder;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 1.25rem;
+        font-size: 1.125rem;
+        margin-bottom: .625rem;
+        li {
+            a {
+                text-decoration: none;
+                color: map-get($colores, color-texto);
+                padding: .625rem .5rem;
+        
+                &:hover {
+                    background-color: map-get($colores, fondo_hover--nav-bar);
+                    border-radius: .3125rem;
+                }
+    
+            }
         }
     }
-}
-header p{
-    font-size: 2rem;
-    color: map-get($colores , color-nombrepagina );
-    margin-bottom: .625rem;
-    font-weight: bolder;
-}
-#btn-menu,
-.iconMenu,
-.iconClose {
-    display: none;
-}
-ul {
-    list-style: none;
-    display: flex;
-    gap:1.25rem;
-    font-size: 1.125rem;
-    margin-bottom: .625rem;
-}
-a {
-    /* display: block; */
-    text-decoration: none;
-    color: map-get($colores, color-texto );
-    padding: .625rem .5rem;
-    /* padding: 20px; */
+    .activo a{
+        background-color: map-get($colores, fondo_clase-activo);
+        border-radius: .3125rem;
+    }
+    #btn-menu,
+    .iconMenu,
+    .iconClose {
+        display: none;
+    }
 }
 
-.activo a{
-    background-color: map-get($colores, fondo_clase-activo );
-    border-radius: .3125rem;
-}
+
+// .activo a {
+//     background-color: map-get($colores, fondo_clase-activo);
+//     border-radius: .3125rem;
+// }
