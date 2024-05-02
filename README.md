@@ -3,7 +3,7 @@
 ------------
 
 ## DESCRIPCION
-Proyecto de tercera entrega de Desarrollo Web CoderHouse. Sitio web con 5 paginas. 
+Entrega de Proyecto Final de curso de Desarrolo Web en CoderHouse.
 ## Tecnologias aplicadas.
 - HTML5
 - CSS3
@@ -12,10 +12,12 @@ Proyecto de tercera entrega de Desarrollo Web CoderHouse. Sitio web con 5 pagina
 - Bootstrap
 - SASS
 - SEO
+- Netlify
 
 ------------
 
 ### Las paginas de totalidad responsive son:
+- Inicio
 - Barcelona
 - Estadisticas
 - Premios
