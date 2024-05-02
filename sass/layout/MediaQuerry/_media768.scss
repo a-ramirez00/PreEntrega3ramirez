@@ -1,6 +1,7 @@
 @media(max-width: 799px) {
     header {
         @include flex(row, space-around, center);
+
         .iconClose,
         .iconMenu {
             display: block;
@@ -64,15 +65,52 @@
     }
 
     main {
-        .section-barcelona{
-            p{  
+        .galeria-inicio {
+            display: none;
+        }
+        .grid-inicio {
+            display: grid;
+            width: 90%;
+            height: auto;
+            margin-bottom: .625rem;
+        }
+            .parrafo-grid-1 {
+                width: 85%;
+            }
+            .parrafo-grid-2 {
+                width: 85%;
+            }
+        
+        .grid-seleccion {
+            display: grid;
+            width: 90%;
+            margin: auto;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1.875rem repeat(3, 1fr);
+            grid-template-areas:
+                "titulo-grid         ."
+                " parrafo-se     parrafo-se"
+                " img1-seleccion img2-seleccion"
+                " img1-seleccion img2-seleccion"
+            ;
+            margin-bottom: .9375rem;
+        }
+        .parrafo-seleccion {
+            flex-wrap: wrap;
+        }
+        .img3-seleccion {
+            display: none;
+        }
+        // -----------
+        .section-barcelona {
+            p {
                 margin: .625rem;
             }
         }
         .barcelona-tablet {
             @include flex(column, center, none);
             gap: 1.25rem;
-            img{
+            img {
                 width: 25rem;
             }
         }
@@ -80,26 +118,21 @@
             @include flex(column, none, none);
             gap: 1.5625rem;
             width: 80%;
-            img{
+            img {
                 width: 25rem;
             }
         }
         .div-parrafo {
-
             width: 100%;
         }
-    
-
+        // -----------
         .estadisticas-pagina {
             @include flex(column, center, center);
             flex-wrap: wrap;
-
             .estadisticas {
                 width: 80%;
-
                 ul {
                     padding: .4375rem;
-
                     &:hover {
                         background-color: none;
                         border-radius: none;
@@ -107,17 +140,17 @@
                 }
             }
         }
-// -----------------------------
-        .section-parrafo{
+        // -----------------------------
+        .section-parrafo {
             width: 90%;
             text-indent: .25rem;
         }
-        .premios{
+        .premios {
             gap: 1.25rem;
             margin-bottom: .625rem;
-            .Premios-parrafo{
+            .Premios-parrafo {
                 width: 96%;
-                p{
+                p {
                     text-indent: .25rem;
                     font-size: 1rem;
                 }
@@ -129,20 +162,17 @@
             margin-bottom: .625rem;
             font-size: 3rem;
         }
-    
         .contacto {
             .parrafo-contacto {
                 gap: .9375rem;
                 text-indent: .3125rem;
             }
-    
             .formulario {
                 width: 70%;
                 margin-bottom: .625rem;
                 form {
                     width: 70%;
                     gap: .625rem;
-
                     .separacion {
                         .enviar {
                             width: 30%;
@@ -151,8 +181,6 @@
                 }
             }
         }
-
-
     }
 
 

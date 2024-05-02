@@ -1,31 +1,68 @@
-@media(max-width: 799px) {
+@media(max-width: 468px) {
     main {
+        .titulo-inicio{
+            font-size: 2rem;
+            margin-left: .625rem;
+            margin-right: .625rem;
+        }
+        .grid-inicio {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 14.0625rem 17.1875rem 25rem;
+            grid-template-areas:
+                " img1 img1 "
+                " parrafo1 parrafo1 "
+                " img2 img2 "
+                " parrafo2 parrafo2 "
+            ;
+        }
+        .grid-seleccion {
+            display: grid;
+            width: 90%;
+            margin: auto;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1.875rem 14.0625rem 23.4375rem 20.3125rem;
+            grid-template-areas:
+                "titulo-grid     titulo-grid"
+                " parrafo-se     parrafo-se"
+                " img1-seleccion img1-seleccion"
+                " img2-seleccion img2-seleccion"
+            ;
+            grid-gap: .625rem;
+        }
+        .parrafo-seleccion {
+            flex-wrap: wrap;
+        }
+
+        // --------------
         .barcelona-tablet {
-            img{
+            img {
                 width: 20.3125rem;
             }
         }
+
         .section-barcelona1 {
             width: 87%;
-            img{
+
+            img {
                 width: 20.3125rem;
             }
         }
 
-
-
-        .premios{
-            img{
-                width: 20.3125rem;;
+        .premios {
+            img {
+                width: 20.3125rem;
+                ;
             }
-            .Premios-parrafo{
+
+            .Premios-parrafo {
                 width: 95%;
-                p{
+
+                p {
                     text-indent: .20rem;
                     font-size: 1rem;
                 }
             }
         }
     }
-
 }

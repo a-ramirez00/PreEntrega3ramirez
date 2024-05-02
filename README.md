@@ -5,8 +5,8 @@
 ## DESCRIPCION
 Proyecto de tercera entrega de Desarrollo Web CoderHouse. Sitio web con 5 paginas. 
 ## Tecnologias aplicadas.
-- HTML
-- CSS-
+- HTML5
+- CSS3
 - Git
 - GitHub
 - Bootstrap
